@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,20 +27,22 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <a href="#" className="flex items-center">
+        <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold font-playfair">
             <span className="text-turquoise">LARAVEL</span>
             <span className="text-violet">FASHION</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <a href="#home" className="text-gray-800 hover:text-violet font-medium transition-colors">Home</a>
+          <Link to="/" className="text-gray-800 hover:text-violet font-medium transition-colors">Home</Link>
           <a href="#about" className="text-gray-800 hover:text-violet font-medium transition-colors">About</a>
-          <a href="#programs" className="text-gray-800 hover:text-violet font-medium transition-colors">Programs</a>
+          <a href="#programs" className="text-gray-800 hover:text-violet font-medium transition-colors">Courses</a>
           <a href="#faculty" className="text-gray-800 hover:text-violet font-medium transition-colors">Faculty</a>
           <a href="#gallery" className="text-gray-800 hover:text-violet font-medium transition-colors">Gallery</a>
+          <Link to="/blogs" className="text-gray-800 hover:text-violet font-medium transition-colors">Blogs</Link>
+          <Link to="/news-events" className="text-gray-800 hover:text-violet font-medium transition-colors">News & Events</Link>
           <a href="#contact" className="text-gray-800 hover:text-violet font-medium transition-colors">Contact</a>
         </div>
 
@@ -58,13 +61,13 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-md py-4 px-6 animate-fade-in">
           <div className="flex flex-col space-y-4">
-            <a 
-              href="#home" 
+            <Link 
+              to="/" 
               className="text-gray-800 hover:text-violet font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
-            </a>
+            </Link>
             <a 
               href="#about" 
               className="text-gray-800 hover:text-violet font-medium transition-colors"
@@ -77,7 +80,7 @@ const Navbar = () => {
               className="text-gray-800 hover:text-violet font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Programs
+              Courses
             </a>
             <a 
               href="#faculty" 
@@ -93,6 +96,20 @@ const Navbar = () => {
             >
               Gallery
             </a>
+            <Link 
+              to="/blogs" 
+              className="text-gray-800 hover:text-violet font-medium transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Blogs
+            </Link>
+            <Link 
+              to="/news-events" 
+              className="text-gray-800 hover:text-violet font-medium transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              News & Events
+            </Link>
             <a 
               href="#contact" 
               className="text-gray-800 hover:text-violet font-medium transition-colors"
