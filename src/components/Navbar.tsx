@@ -30,14 +30,14 @@ const Navbar = () => {
         <Link to="/" className="flex items-center">
           <div className="h-14 mr-3">
             <img 
-              src="/lovable-uploads/995d0b77-55b5-45f1-af81-ca4b66486928.png" 
-              alt="NIFT Logo" 
+              src="/lovable-uploads/7fd29a7a-e232-4e3b-87db-b7b47dd38c71.png" 
+              alt="NIFT Nepal Logo" 
               className="h-full object-contain filter drop-shadow-md"
             />
           </div>
           <span className="text-2xl font-bold font-playfair hidden sm:inline-block">
             <span className="text-turquoise">NIFT</span>
-            <span className="text-violet">FASHION</span>
+            <span className="text-violet">NEPAL</span>
           </span>
         </Link>
 
