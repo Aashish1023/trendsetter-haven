@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <div className="h-14 mr-3">
+          <div className="h-20 mr-3">
             <img 
               src="/lovable-uploads/7fd29a7a-e232-4e3b-87db-b7b47dd38c71.png" 
               alt="NIFT Nepal Logo" 
