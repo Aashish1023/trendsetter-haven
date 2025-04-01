@@ -28,8 +28,15 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold font-playfair">
-            <span className="text-turquoise">LARAVEL</span>
+          <div className="h-14 mr-3">
+            <img 
+              src="/lovable-uploads/995d0b77-55b5-45f1-af81-ca4b66486928.png" 
+              alt="NIFT Logo" 
+              className="h-full object-contain filter drop-shadow-md"
+            />
+          </div>
+          <span className="text-2xl font-bold font-playfair hidden sm:inline-block">
+            <span className="text-turquoise">NIFT</span>
             <span className="text-violet">FASHION</span>
           </span>
         </Link>
