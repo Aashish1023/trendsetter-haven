@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,48 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .gradient-heading {
+    @apply bg-gradient-to-r from-turquoise to-violet bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-turquoise hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all;
+  }
+  
+  .btn-secondary {
+    @apply bg-violet hover:bg-opacity-90 text-white font-bold py-3 px-6 rounded-md transition-all;
+  }
+  
+  .heading-underline {
+    @apply relative inline-block;
+  }
+  
+  .heading-underline::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-turquoise to-violet scale-x-0 origin-bottom-left transition-transform duration-300;
+  }
+  
+  .heading-underline:hover::after {
+    @apply scale-x-100;
+  }
+  
+  .fashion-card {
+    @apply overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .diagonal-box {
+    @apply relative overflow-hidden;
+  }
+  
+  .diagonal-box::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-gradient-to-br from-turquoise/10 to-violet/10 -skew-y-6 transform-gpu;
   }
 }
